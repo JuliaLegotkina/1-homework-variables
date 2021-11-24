@@ -3,7 +3,6 @@ package ru.skypro;
 public class Main {
 
     public static void main(String[] args) {
-        // write your code here
         byte a = -89;
         short b = 30_000;
         int c = 2_000_111_222;
@@ -16,37 +15,36 @@ public class Main {
         boolean h = false;
 
 
+        double firstBoxerWeight = 78.2;
+        double secondBoxerWeight = 82.7;
+        double totalWeight = firstBoxerWeight + secondBoxerWeight;
+        double differenceInWeight = secondBoxerWeight - firstBoxerWeight;
 
-        double boxerOne = 78.2;
-        double boxerTwo = 82.7;
-        double generalWeight = boxerOne + boxerTwo;
-        double differenceInWeight = boxerTwo - boxerOne;
-
-        System.out.println("Общий вес двух боксеров составляет " + generalWeight + " кг!");
+        System.out.println("Общий вес двух боксеров составляет " + totalWeight + " кг!");
         System.out.println("Разница в весе двух боксеров составляет " + differenceInWeight + " кг!");
-
 
 
         int bananasAmount = 5;
         int bananaGramWeight = 80;
-        int bananasWeightBreakfast = 5 * 80;
+        int bananasWeightBreakfast = bananasAmount * bananaGramWeight;
 
         System.out.println("Бананов в завтраке " + bananasWeightBreakfast + " грамм");
 
         int iceCreamAmount = 2;
         int iceCreamWeight = 100;
-        int iceCreamWeightBreakfast = 2 * 100;
+        int iceCreamWeightBreakfast = iceCreamAmount * iceCreamWeight;
 
         System.out.println("Мороженого в завтраке " + iceCreamWeightBreakfast + " грамм");
 
         int eggsAmount = 4;
         int eggWeight = 70;
-        int eggsWeightBreakfast = 4 * 70;
+        int eggsWeightBreakfast = eggsAmount * eggWeight;
 
         System.out.println("Яиц в завтраке " + eggsWeightBreakfast + " грамм");
 
-        float mlGramRatio = 105 /(100 * 1.0f);
-        System.out.println("Соотношение милилитров к граммам 1 к  " + mlGramRatio);
+        int wilkWeight = 100;
+        float mlGramRatio = 105 /(wilkWeight * 1.0f);
+        System.out.println("Соотношение милилитров к граммам 1 к " + mlGramRatio);
 
         float milkWeightInMl = 200;
         float milkWeightInGr = milkWeightInMl * mlGramRatio;
@@ -65,7 +63,6 @@ public class Main {
         System.out.println("Завтрак составил " + allBreakfastInKg + " килограмм");
 
 
-
         int needToLoseKg = 7;
         int gramsInKg = 1_000;
 
@@ -73,41 +70,39 @@ public class Main {
 
         System.out.println("Спортсмену необходимо скинуть " + needToLoseInGrams + " грамм");
 
-        int minDaily = 250;
-        int maxDaily = 500;
+        int minDailyLoose = 250;
+        int maxDailyLoose = 500;
 
-        int daysMin = needToLoseInGrams / maxDaily;
-        int daysMax = needToLoseInGrams / minDaily;
+        int daysMin = needToLoseInGrams / maxDailyLoose;
+        int daysMax = needToLoseInGrams / minDailyLoose;
 
         System.out.println("Чтобы похудеть, спортсмену потребуется минимум " + daysMin + " дней и максимум " + daysMax);
 
         int daysAverage = (daysMin + daysMax) / 2;
 
-        System.out.println("В среднем спортсмену потребуется " + daysAverage + " день, чтобы похудеть");
+        System.out.println("В среднем спортсмену потребуется " + daysAverage + " дней, чтобы похудеть");
 
 
+        int mashaMonthSalary = 67_760;
+        int denisMonthSalary = 83_690;
+        int kristinaMonthSalary = 76_230;
 
-        int mashaPerMonth = 67_760;
-        int denisPerMonth = 83_690;
-        int kristinaPerMonth = 76_230;
+        int increasePercent = 10;
 
-        int increaseRate = 10;
+        float newSalaryRatio = 1 + (increasePercent / 100f);
 
-        float newSalaryRatio = 1 + (increaseRate / 100f);
+        float mashaNewPerMonth = mashaMonthSalary * newSalaryRatio;
+        float denisNewPerMonth = denisMonthSalary * newSalaryRatio;
+        float kristinaNewPerMonth = kristinaMonthSalary * newSalaryRatio;
 
-        int mashaNewPerMonth = (int) (mashaPerMonth * newSalaryRatio);
-        int denisNewPerMonth = (int) (denisPerMonth * newSalaryRatio);
-        int kristinaNewPerMonth = (int) (kristinaPerMonth * newSalaryRatio);
+        float mashaDifferenceRate = mashaNewPerMonth - mashaMonthSalary;
+        float denisDifferenceRate = denisNewPerMonth - denisMonthSalary;
+        float kristinaDifferenceRate = kristinaNewPerMonth - kristinaMonthSalary;
 
-        int mashaDifferenceRate = mashaNewPerMonth - mashaPerMonth;
-        int denisDifferenceRate = denisNewPerMonth - denisPerMonth;
-        int kristinaDifferenceRate = kristinaNewPerMonth - kristinaPerMonth;
+        System.out.println("После увеличения зарплаты Маша стала получать " + mashaNewPerMonth +". Годовой доход вырос на " + mashaDifferenceRate * 12 + " рублей.");
 
-        System.out.println("После увеличения зарплаты Маша стала получать " + mashaNewPerMonth +". Это на " + mashaDifferenceRate + " больше, чем в прошлом году.");
+        System.out.println("После увеличения зарплаты Денис стал получать " + denisNewPerMonth +". Годовой доход вырос на " + denisDifferenceRate * 12 + " рублей.");
 
-        System.out.println("После увеличения зарплаты Денис стал получать " + denisNewPerMonth +". Это на " + denisDifferenceRate + " больше, чем в прошлом году.");
-
-        System.out.println("После увеличения зарплаты Кристина стала получать " + kristinaNewPerMonth +". Это на " + kristinaDifferenceRate + " больше, чем в прошлом году.");
+        System.out.println("После увеличения зарплаты Кристина стала получать " + kristinaNewPerMonth +". Годовой доход вырос на " + kristinaDifferenceRate * 12 + " рублей.");
     }
 }
-
