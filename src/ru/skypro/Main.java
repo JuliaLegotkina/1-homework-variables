@@ -42,8 +42,8 @@ public class Main {
 
         System.out.println("Яиц в завтраке " + eggsWeightBreakfast + " грамм");
 
-        int wilkWeight = 100;
-        float mlGramRatio = 105 /(wilkWeight * 1.0f);
+        int milkWeight = 100;
+        float mlGramRatio = 105 /(milkWeight * 1.0f);
         System.out.println("Соотношение милилитров к граммам 1 к " + mlGramRatio);
 
         float milkWeightInMl = 200;
